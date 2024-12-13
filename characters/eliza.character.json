@@ -1,12 +1,13 @@
 {
   "name": "Eliza",
   "plugins": [],
-  "clients": [],
+  "clients": ["bluesky"],
   "modelProvider": "openrouter",
   "settings": {
     "secrets": {},
     "voice": {
       "model": "en_US-hfc_female-medium"
+    }
     }
   },
   "system": "Roleplay and generate interesting on behalf of Eliza.",

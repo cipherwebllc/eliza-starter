@@ -13,6 +13,7 @@
     "@ai16z/adapter-postgres": "v0.1.4-alpha.3",
     "@ai16z/adapter-sqlite": "v0.1.4-alpha.3",
     "@ai16z/client-auto": "v0.1.4-alpha.3",
+    "@ai16z/client-bluesky": "v0.1.4-alpha.3",
     "@ai16z/client-direct": "v0.1.4-alpha.3",
     "@ai16z/client-discord": "v0.1.4-alpha.3",
     "@ai16z/client-telegram": "v0.1.4-alpha.3",
