@@ -1,8 +1,9 @@
 import { PostgresDatabaseAdapter } from "@ai16z/adapter-postgres";
 import { SqliteDatabaseAdapter } from "@ai16z/adapter-sqlite";
+import { AutoClientInterface } from "@ai16z/client-auto";
+import { BlueskyClientInterface } from "@ai16z/client-bluesky";
 import { DirectClientInterface } from "@ai16z/client-direct";
 import { DiscordClientInterface } from "@ai16z/client-discord";
-import { AutoClientInterface } from "@ai16z/client-auto";
 import { TelegramClientInterface } from "@ai16z/client-telegram";
 import { TwitterClientInterface } from "@ai16z/client-twitter";
 import {
@@ -171,6 +172,11 @@ export async function initializeClients(
   if (clientTypes.includes("auto")) {
     const autoClient = await AutoClientInterface.start(runtime);
     if (autoClient) clients.push(autoClient);
+  }
+
+  if (clientTypes.includes("bluesky")) {
+    const blueskyClient = await BlueskyClientInterface.start(runtime);
+    if (blueskyClient) clients.push(blueskyClient);
   }
 
   if (clientTypes.includes("discord")) {
